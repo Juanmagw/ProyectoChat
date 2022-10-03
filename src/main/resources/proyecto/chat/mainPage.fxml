@@ -61,35 +61,38 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ImageView>
-      <Label alignment="CENTER" layoutX="25.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Deporte" textAlignment="CENTER" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="25.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Sport" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></Label>
-      <Label alignment="CENTER" layoutX="247.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Cocina" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="247.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Cook" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></Label>
-      <Label alignment="CENTER" layoutX="466.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Videojuegos" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="466.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Videogames" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></Label>
-      <Label alignment="CENTER" layoutX="680.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Música" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="680.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Music" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></Label>
-      <Label layoutX="42.0" layoutY="21.0" prefHeight="38.0" prefWidth="167.0" text="LOGO" />
+      <Label layoutX="42.0" layoutY="21.0" prefHeight="38.0" prefWidth="62.0" text="LOGO">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
       <Button layoutX="861.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Salir" />
       <Button layoutX="822.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Max" />
       <Button layoutX="785.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Min" />
@@ -108,8 +111,8 @@
             <Image url="@../../Images/maximizar.png" />
          </image>
       </ImageView>
-      <Button layoutX="564.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Ayuda" />
-      <Button layoutX="714.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Info" />
+      <Button layoutX="564.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Help" />
+      <Button layoutX="714.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Rules" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
