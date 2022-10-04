@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.nombredepantallaprincipal">
+   <children>
+      <Button layoutX="25.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Button layoutX="247.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button layoutX="466.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button layoutX="680.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="158.0" fitWidth="196.0" layoutX="25.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/deporte.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fitHeight="190.0" fitWidth="196.0" layoutX="247.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/cocina.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fitHeight="190.0" fitWidth="196.0" layoutX="466.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/videojuegos.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fitHeight="190.0" fitWidth="196.0" layoutX="680.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/música.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Sport" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+      <Label alignment="CENTER" layoutX="247.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Cook" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+      <Label alignment="CENTER" layoutX="466.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Videogames" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+      <Label alignment="CENTER" layoutX="680.0" layoutY="123.0" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: grey;" text="Music" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+      <Label layoutX="42.0" layoutY="21.0" prefHeight="38.0" prefWidth="62.0" text="LOGO">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button layoutX="861.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Salir" />
+      <Button layoutX="822.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Max" />
+      <Button layoutX="785.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Min" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="868.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/cerrar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="791.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/minimizar.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="25.0" fitWidth="39.0" layoutX="829.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/maximizar.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="564.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Help" />
+      <Button layoutX="714.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Rules" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
