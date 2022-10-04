@@ -2,6 +2,7 @@ module proyecto.chat {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.xml.bind;
+    requires java.logging;
     requires javafx.base;
     requires javafx.graphics;
     requires java.desktop;
