@@ -8,65 +8,68 @@ import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="room")
-public class LivingRoom implements Serializable {
+public class Room implements Serializable {
 
     /**
      *  Atributos de clase
      */
     static final long serialVersionUID = 1L;
-    private String nombre;
-    private int numMax;
+    private String name;
+    private int numUsersMax;
     private List<User> users;
+    private List<String> messages;
 
     /**
      *
-     * @param nombre Nombre de la sala
-     * @param numMax Número maximo de usuarios que se pueden conectar
+     * @param name Nombre de la sala
+     * @param numUsersMax Número maximo de usuarios que se pueden conectar
      * @param users Usuarios conectados
+     * @param messages Mensajes de texto que escriben los usuarios
      */
-    public LivingRoom(String nombre, int numMax, List<User> users) {
-        this.nombre = nombre;
-        this.numMax = numMax;
+    public Room(String name, int numUsersMax, List<User> users, List<String> messages) {
+        this.name = name;
+        this.numUsersMax = numUsersMax;
         this.users = users;
+        this.messages = messages;
     }
 
     /**
      * Constructor por defecto
      */
-    public LivingRoom() {
-        this("Ramdon",10,null);
+    public Room() {
+        this("Ramdon",10,null, null);
     }
 
     /**
      * Obtiene el nombre de la sala
      * @return Nombre de la sala
      */
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
     /**
      * Setea el nombre de la sala
-     * @param nombre Nombre de la sala
+     * @param name Nombre de la sala
      */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * Obtiene el número máximo de usuarios que pueden conectarse
      * @return Número máximo de usuarios
      */
-    public int getNumMax() {
-        return numMax;
+    public int getNumUsersMax() {
+        return numUsersMax;
     }
 
     /**
      * Setea el número de máximo de usuarios que se pueden conectar
-     * @param numMax
+     * @param numUsersMax
      */
-    public void setNumMax(int numMax) {
-        this.numMax = numMax;
+    public void setNumUsersMax(int numUsersMax) {
+        this.numUsersMax = numUsersMax;
     }
 
     /**
@@ -83,5 +86,13 @@ public class LivingRoom implements Serializable {
      */
     public void setUsers(List<User> users) {
         this.users = users;
+    }
+
+    public List<String> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<String> messages) {
+        this.messages = messages;
     }
 }

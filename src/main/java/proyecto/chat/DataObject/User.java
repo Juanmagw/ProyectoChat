@@ -1,7 +1,5 @@
 package proyecto.chat.DataObject;
 
-import javafx.fxml.FXML;
-
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,21 +15,21 @@ public class User implements Serializable {
     static final long serialVersionUID = 1L;
     private String alias;
     private String ip;
-    private boolean baneado;
-    private int numFaltas;
+    private boolean banned;
+    private int numOffence;
 
     /**
      *  Constructor parametrizado
      * @param alias Nickname del usuario
      * @param ip Dirección IP del usuario
-     * @param baneado Usuario baneado
-     * @param numFaltas Numero de faltas del usuario
+     * @param banned Usuario baneado
+     * @param numOffence Numero de faltas del usuario
      */
-    public User(String alias, String ip, boolean baneado, int numFaltas) {
+    public User(String alias, String ip, boolean banned, int numOffence) {
         this.alias = alias;
         this.ip = ip;
-        this.baneado = baneado;
-        this.numFaltas = numFaltas;
+        this.banned = banned;
+        this.numOffence = numOffence;
     }
 
     /**
@@ -77,31 +75,31 @@ public class User implements Serializable {
      * Determina si el usuario está baneado o no
      * @return True baneado, false no baneado
      */
-    public boolean isBaneado() {
-        return baneado;
+    public boolean isBanned() {
+        return banned;
     }
 
     /**
      * Setea si el usuario es o no baneado
-     * @param baneado True o false
+     * @param banned True o false
      */
-    public void setBaneado(boolean baneado) {
-        this.baneado = baneado;
+    public void setBanned(boolean banned) {
+        this.banned = banned;
     }
 
     /**
      * Obtiene el número de faltas del usuario
      * @return NUmero de faltas
      */
-    public int getNumFaltas() {
-        return numFaltas;
+    public int getNumOffence() {
+        return numOffence;
     }
 
     /**
      * Setea el número de faltas del usuario
-     * @param numFaltas Número de faltas
+     * @param numOffence Número de faltas
      */
-    public void setNumFaltas(int numFaltas) {
-        this.numFaltas = numFaltas;
+    public void setNumOffence(int numOffence) {
+        this.numOffence = numOffence;
     }
 }
