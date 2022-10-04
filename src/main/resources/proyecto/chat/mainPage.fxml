@@ -11,9 +11,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.nombredepantallaprincipal">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.controller.MainController">
    <children>
-      <Button layoutX="25.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
+      <Button fx:id="btnSportChat" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                <stops>
@@ -30,31 +30,31 @@
                </stops>
             </RadialGradient>
          </textFill></Button>
-      <Button layoutX="247.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
-      <Button layoutX="466.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
-      <Button layoutX="680.0" layoutY="170.0" mnemonicParsing="false" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
-      <ImageView fitHeight="158.0" fitWidth="196.0" layoutX="25.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="btnCookChat" layoutX="247.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnVideogamesChat" layoutX="466.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnMusicChat" layoutX="680.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <ImageView disable="true" fitHeight="158.0" fitWidth="196.0" layoutX="25.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/deporte.jpg" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ImageView>
-      <ImageView fitHeight="190.0" fitWidth="196.0" layoutX="247.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="190.0" fitWidth="196.0" layoutX="247.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/cocina.jpg" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ImageView>
-      <ImageView fitHeight="190.0" fitWidth="196.0" layoutX="466.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="190.0" fitWidth="196.0" layoutX="466.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/videojuegos.jpg" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ImageView>
-      <ImageView fitHeight="190.0" fitWidth="196.0" layoutX="680.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="190.0" fitWidth="196.0" layoutX="680.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/música.jpg" />
          </image>
@@ -93,15 +93,15 @@
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Button layoutX="861.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Salir" />
-      <Button layoutX="822.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Max" />
-      <Button layoutX="785.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Min" />
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="868.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="btnCerrar" layoutX="861.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#cerrar" opacity="0.0" text="Salir" />
+      <Button fx:id="btnMaximizar" disable="true" layoutX="822.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Max" />
+      <Button fx:id="btnMinimizar" layoutX="785.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#minimizar" opacity="0.0" text="Min" />
+      <ImageView disable="true" fitHeight="25.0" fitWidth="25.0" layoutX="868.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/cerrar.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="39.0" layoutX="791.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="25.0" fitWidth="39.0" layoutX="791.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/minimizar.png" />
          </image>
@@ -111,8 +111,8 @@
             <Image url="@../../Images/maximizar.png" />
          </image>
       </ImageView>
-      <Button layoutX="564.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Help" />
-      <Button layoutX="714.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Rules" />
+      <Button fx:id="btnHelp" layoutX="564.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Help" />
+      <Button fx:id="btnRules" layoutX="714.0" layoutY="360.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="Rules" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
