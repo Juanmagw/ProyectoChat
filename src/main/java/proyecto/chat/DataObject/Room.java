@@ -17,7 +17,7 @@ public class Room implements Serializable {
     private String name;
     private int numUsersMax;
     private List<User> users;
-    private List<String> messages;
+    private List<UserMessage> messages;
 
     /**
      *
@@ -26,7 +26,7 @@ public class Room implements Serializable {
      * @param users Usuarios conectados
      * @param messages Mensajes de texto que escriben los usuarios
      */
-    public Room(String name, int numUsersMax, List<User> users, List<String> messages) {
+    public Room(String name, int numUsersMax, List<User> users, List<UserMessage> messages) {
         this.name = name;
         this.numUsersMax = numUsersMax;
         this.users = users;
@@ -88,11 +88,19 @@ public class Room implements Serializable {
         this.users = users;
     }
 
-    public List<String> getMessages() {
+    /**
+     * Obtiene los mensajes escritos en el chat
+     * @return List de mensajes
+     */
+    public List<UserMessage> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<String> messages) {
+    /**
+     * Setea los mensajes escritos en un chat
+     * @param messages List de mensajes a setear
+     */
+    public void setMessages(List<UserMessage> messages) {
         this.messages = messages;
     }
 }

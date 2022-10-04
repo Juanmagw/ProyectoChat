@@ -102,4 +102,25 @@ public class User implements Serializable {
     public void setNumOffence(int numOffence) {
         this.numOffence = numOffence;
     }
+
+    /**
+     * Compara un usuario con otro por su atributo alias.
+     * Devuelve true o false en case de que sean iguales o no.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        boolean result=false;
+        if (obj != null) {
+            if (this == obj) {
+                result = true;
+            } else {
+                if(obj instanceof User){
+                    if (this.alias!=null && this.alias.equals(((User)obj).alias)) {
+                        result = true;
+                    }
+                }
+            }
+        }
+        return result;
+    }
 }
