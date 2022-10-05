@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="485.0" prefWidth="833.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.ChatPage">
+<AnchorPane prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.controller.PrivateChatPage">
    <children>
-      <AnchorPane layoutX="147.0" layoutY="140.0" prefHeight="321.0" prefWidth="540.0" style="-fx-background-color: black;">
+      <AnchorPane layoutX="180.0" layoutY="95.0" prefHeight="321.0" prefWidth="540.0" style="-fx-background-color: black;">
          <children>
             <TextArea layoutX="14.0" layoutY="14.0" prefHeight="292.0" prefWidth="514.0" />
             <TextField layoutX="29.0" layoutY="271.0" prefHeight="25.0" prefWidth="395.0" promptText="Escriba aquí" />
@@ -21,10 +21,11 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="148.0" layoutY="40.0" text="NOMBRE DEL USUARIO CON EL QUE SE HABLE">
+      <Label layoutX="138.0" layoutY="25.0" text="NOMBRE DEL USUARIO CON EL QUE SE HABLE">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
+      <Button fx:id="goBack" layoutX="14.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#goBack" text="Volver" />
    </children>
 </AnchorPane>
