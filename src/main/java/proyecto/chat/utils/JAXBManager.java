@@ -16,7 +16,7 @@ public class JAXBManager {
      * @param rooms List de chats
      * @param file Nombre de archivo
      */
-    public static void save(Room rooms, String file) {
+    public static void save(Rooms rooms, String file) {
         JAXBContext context;
         BufferedWriter bfr;
         try {
