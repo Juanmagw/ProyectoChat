@@ -28,13 +28,13 @@ public class JAXBManager {
             bfr.close();
             Logging.infoLogging("Escritura en archivo xml exitosa.");
         } catch (IOException e) {
-            Logging.warningLogging(e+"");
+            Logging.warningLogging(e+"io");
             new ErrorMessage("Error en escritura del archivo.","Error");
         } catch (PropertyException e) {
-            Logging.warningLogging(e+"");
+            Logging.warningLogging(e+"propperty");
             new ErrorMessage("Error en escritura del archivo.","Error");
         } catch (JAXBException e) {
-            Logging.warningLogging(e+"");
+            Logging.warningLogging(e+"jaxb");
             new ErrorMessage("Error en escritura del archivo.","Error");
         }
     }
@@ -51,10 +51,18 @@ public class JAXBManager {
         try {
             context = JAXBContext.newInstance(Room.class);
             Unmarshaller um = context.createUnmarshaller();
-            result=(Rooms)um.unmarshal(new File(file));
+            File f = new File(file);
+            if(f.exists()){
+                result=(Rooms)um.unmarshal(new File(file));
+            }else{
+                f.createNewFile();
+            }
+
         } catch (JAXBException e) {
             Logging.warningLogging(e+"");
             new ErrorMessage("Error al cargar el archivo.","Error");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
         Logging.infoLogging("Archivo xml cargado.");
         return result;

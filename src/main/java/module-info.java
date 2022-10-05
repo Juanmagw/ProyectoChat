@@ -10,6 +10,7 @@ module proyecto.chat {
 
     opens proyecto.chat to javafx.fxml;
     exports proyecto.chat.utils;
+    opens proyecto.chat.DataObject to java.xml.bind;
     opens proyecto.chat.utils to java.xml.bind;
     exports proyecto.chat.controller;
     opens proyecto.chat.controller to javafx.fxml;
