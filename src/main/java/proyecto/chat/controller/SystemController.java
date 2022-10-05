@@ -9,7 +9,7 @@ import proyecto.chat.utils.JAXBManager;
 public class SystemController {
 
     final private int NUM_MAX_CHATS = 4;
-    private String chatsFile;
+    private String chatsFile="chatsFile.xml";
     private Rooms rooms;
 
     public void loadSystem(){
