@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.controller.MainController">
    <children>
-      <Button fx:id="btnSportChat" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
+      <Button fx:id="btnChat" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                <stops>
@@ -30,9 +30,9 @@
                </stops>
             </RadialGradient>
          </textFill></Button>
-      <Button fx:id="btnCookChat" layoutX="247.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
-      <Button fx:id="btnVideogamesChat" layoutX="466.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
-      <Button fx:id="btnMusicChat" layoutX="680.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnChat" layoutX="247.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnChat" layoutX="466.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnChat" layoutX="680.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
       <ImageView disable="true" fitHeight="158.0" fitWidth="196.0" layoutX="25.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/deporte.jpg" />
@@ -93,9 +93,9 @@
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Button fx:id="btnCerrar" layoutX="861.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#cerrar" opacity="0.0" text="Salir" />
-      <Button fx:id="btnMaximizar" disable="true" layoutX="822.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Max" />
-      <Button fx:id="btnMinimizar" layoutX="785.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#minimizar" opacity="0.0" text="Min" />
+      <Button fx:id="btnClose" layoutX="861.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#close" opacity="0.0" text="Salir" />
+      <Button fx:id="btnMaximize" disable="true" layoutX="822.0" layoutY="8.0" mnemonicParsing="false" opacity="0.0" text="Max" />
+      <Button fx:id="btnMinimize" layoutX="785.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#minimize" opacity="0.0" text="Min" />
       <ImageView disable="true" fitHeight="25.0" fitWidth="25.0" layoutX="868.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/cerrar.png" />
