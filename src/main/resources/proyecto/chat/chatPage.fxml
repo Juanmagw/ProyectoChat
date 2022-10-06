@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.controller.ChatController">
+<AnchorPane prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: rgba(100,200,150,1);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.controller.ChatController">
    <children>
       <AnchorPane layoutX="83.0" layoutY="95.0" prefHeight="321.0" prefWidth="540.0" style="-fx-background-color: black;">
          <children>
-            <TextArea layoutX="14.0" layoutY="14.0" prefHeight="292.0" prefWidth="514.0" />
-            <TextField layoutX="27.0" layoutY="272.0" prefHeight="25.0" prefWidth="395.0" promptText="Escriba aquí" />
-            <Button layoutX="422.0" layoutY="272.0" mnemonicParsing="false" text="Enviar" />
+            <TextArea fx:id="taMessages" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="292.0" prefWidth="514.0" />
+            <TextField fx:id="tfWriteMessage" layoutX="27.0" layoutY="272.0" prefHeight="25.0" prefWidth="395.0" promptText="Escriba aquí" />
+            <Button fx:id="btnSend" layoutX="422.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#sendMessage" text="Enviar" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="623.0" layoutY="95.0" prefHeight="321.0" prefWidth="238.0" style="-fx-background-color: grey;">
@@ -61,6 +61,6 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Button fx:id="goBack" layoutX="14.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#goBack" text="Volver" />
+      <Button fx:id="btnGoBack" layoutX="14.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#goBack" text="Volver" />
    </children>
 </AnchorPane>
