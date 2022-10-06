@@ -1,13 +1,11 @@
 package proyecto.chat.utils;
 
-import proyecto.chat.DataObject.Room;
-import proyecto.chat.DataObject.Rooms;
+import proyecto.chat.model.DataObject.Room;
 import proyecto.chat.logging.Logging;
+import proyecto.chat.model.DAO.RoomsDAO;
+
 import javax.xml.bind.*;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class JAXBManager {
 
@@ -16,25 +14,25 @@ public class JAXBManager {
      * @param rooms List de chats
      * @param file Nombre de archivo
      */
-    public static void save(Rooms rooms, String file) {
+    public static void save(RoomsDAO rooms, String file) {
         JAXBContext context;
         BufferedWriter bfr;
         try {
             bfr = new BufferedWriter(new FileWriter(file));
-            context = JAXBContext.newInstance(Rooms.class);
+            context = JAXBContext.newInstance(RoomsDAO.class);
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             m.marshal(rooms, bfr);
             bfr.close();
             Logging.infoLogging("Escritura en archivo xml exitosa.");
         } catch (IOException e) {
-            Logging.warningLogging(e+"io");
+            Logging.warningLogging(e+"");
             new ErrorMessage("Error en escritura del archivo.","Error");
         } catch (PropertyException e) {
-            Logging.warningLogging(e+"propperty");
+            Logging.warningLogging(e+"");
             new ErrorMessage("Error en escritura del archivo.","Error");
         } catch (JAXBException e) {
-            Logging.warningLogging(e+"jaxb");
+            Logging.warningLogging(e+"");
             new ErrorMessage("Error en escritura del archivo.","Error");
         }
     }
@@ -42,20 +40,20 @@ public class JAXBManager {
     /**
      * Obtiene de un archivo xml los datos de los chats y usuarios
      * @param file Nombre del archivo a cargar
-     * @return List con los chats almacenados
+     * @return List con los chats almacenados o null si está vacío
      */
-    public static Rooms load(String file) {
-        Rooms result = null;
-        result = new Rooms();
-        JAXBContext context = null;
+    public static RoomsDAO load(String file) {
+        RoomsDAO result = null;
+        result = new RoomsDAO();
         try {
-            context = JAXBContext.newInstance(Room.class);
+            JAXBContext context = JAXBContext.newInstance(Room.class);
             Unmarshaller um = context.createUnmarshaller();
             File f = new File(file);
             if(f.exists()){
-                result=(Rooms)um.unmarshal(new File(file));
+                result=(RoomsDAO)um.unmarshal(f);
             }else{
                 f.createNewFile();
+                result=(RoomsDAO)um.unmarshal(f);
             }
 
         } catch (JAXBException e) {

@@ -1,11 +1,18 @@
 package proyecto.chat.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import proyecto.chat.App;
+import proyecto.chat.model.DataObject.Room;
+import proyecto.chat.model.DAO.RoomsDAO;
+import proyecto.chat.utils.JAXBManager;
 
-public class MainController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MainController implements Initializable {
 
     /**
      * Atributos de la clase.
@@ -41,5 +48,14 @@ public class MainController {
      */
     @FXML public void chatPage() throws Exception {
         App.setRoot("chatPage");
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Room room = new Room();
+        RoomsDAO rda = new RoomsDAO();
+        rda.addRoom(room);
+        JAXBManager.save(rda,"chatsFile.xml");
+
     }
 }

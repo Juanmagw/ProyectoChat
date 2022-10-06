@@ -1,4 +1,4 @@
-package proyecto.chat.DataObject;
+package proyecto.chat.model.DataObject;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -102,5 +102,10 @@ public class Room implements Serializable {
      */
     public void setMessages(List<UserMessage> messages) {
         this.messages = messages;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre Chat:" + this.name;
     }
 }

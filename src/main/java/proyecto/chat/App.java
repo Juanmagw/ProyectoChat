@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import proyecto.chat.controller.SystemController;
 
 import java.io.IOException;
 
@@ -17,9 +16,7 @@ public class App extends Application {
 
     private static Scene scene;
 
-    public static void main(String[] args) {
-        launch();
-    }
+    public static void main(String[] args) { launch(); }
 
     /**
      * Crea la escena principal.
@@ -30,7 +27,6 @@ public class App extends Application {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.show();
-        new SystemController().loadSystem();
     }
 
     /**

@@ -19,10 +19,10 @@ public class Logging {
 	 * @param message Mensaje a mostrar
 	 */
 	public static void infoLogging(String message) {
-		//saveLog();
+		saveLog();
 		logger.setLevel(Level.INFO);
 		logger.log(Level.INFO,message);
-		//logger.info(message);
+		logger.info(message);
 	}
 	
 	/**
@@ -30,10 +30,10 @@ public class Logging {
 	 * @param message Mensaje a mostrar
 	 */
 	public static void warningLogging(String message) {
-		//saveLog();
+		saveLog();
 		logger.setLevel(Level.WARNING);
 		logger.log(Level.WARNING,message);
-		//logger.info(message);
+		logger.info(message);
 	}
 
 	/**

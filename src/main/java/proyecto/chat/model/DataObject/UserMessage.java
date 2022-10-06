@@ -1,4 +1,4 @@
-package proyecto.chat.DataObject;
+package proyecto.chat.model.DataObject;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.time.LocalDate;
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="messages")
+@XmlRootElement(name="message")
 public class UserMessage implements Serializable {
 
     /**
