@@ -1,4 +1,4 @@
-package proyecto.chat.DataObject;
+package proyecto.chat.model.DataObject;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;

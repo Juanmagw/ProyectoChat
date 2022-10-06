@@ -22,7 +22,7 @@ public class Logging {
 		saveLog();
 		logger.setLevel(Level.INFO);
 		logger.log(Level.INFO,message);
-		//logger.info(message);
+		logger.info(message);
 	}
 	
 	/**
@@ -33,7 +33,7 @@ public class Logging {
 		saveLog();
 		logger.setLevel(Level.WARNING);
 		logger.log(Level.WARNING,message);
-		//logger.info(message);
+		logger.info(message);
 	}
 
 	/**
