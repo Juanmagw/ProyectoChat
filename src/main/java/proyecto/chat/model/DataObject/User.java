@@ -123,4 +123,9 @@ public class User implements Serializable {
         }
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Alias: "+ this.alias;
+    }
 }

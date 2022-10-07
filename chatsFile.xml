@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Prueba>
+<Rooms>
     <rooms>
-        <name>Ramdon</name>
-        <numUsersMax>10</numUsersMax>
+        <name>Sport</name>
+        <numUsersMax>50</numUsersMax>
+        <users>
+            <alias>usuario_Prueba</alias>
+            <ip>0.0.0.0</ip>
+            <banned>false</banned>
+            <numOffence>0</numOffence>
+        </users>
     </rooms>
-</Prueba>
+    <rooms>
+        <name>Cook</name>
+        <numUsersMax>20</numUsersMax>
+    </rooms>
+    <rooms>
+        <name>Videogames</name>
+        <numUsersMax>50</numUsersMax>
+    </rooms>
+    <rooms>
+        <name>Music</name>
+        <numUsersMax>20</numUsersMax>
+    </rooms>
+</Rooms>

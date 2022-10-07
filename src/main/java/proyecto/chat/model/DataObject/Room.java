@@ -106,6 +106,6 @@ public class Room implements Serializable {
 
     @Override
     public String toString() {
-        return "Nombre Chat:" + this.name;
+        return "Nombre Chat:" + this.name + users;
     }
 }

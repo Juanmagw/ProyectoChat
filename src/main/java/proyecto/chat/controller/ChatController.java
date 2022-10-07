@@ -1,13 +1,16 @@
 package proyecto.chat.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import proyecto.chat.App;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ChatController {
+public class ChatController implements Initializable {
 
     /**
      * Atributos de la clase.
@@ -20,6 +23,7 @@ public class ChatController {
     @FXML private TableView tvUserTable;
     @FXML private TextField tfWriteMessage;
     @FXML private TextArea taMessages;
+    @FXML private Label lblNombreSala;
     @FXML private Label chatName;
 
     public void setChatName(Label chatName) {
@@ -92,4 +96,8 @@ public class ChatController {
         });
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

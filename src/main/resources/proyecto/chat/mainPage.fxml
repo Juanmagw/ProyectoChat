@@ -13,6 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: rgba(100,200,150,1);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.controller.MainController">
    <children>
+      <Button fx:id="btnChat" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#nickPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
       <Button fx:id="btnChatSport" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
