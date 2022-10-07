@@ -4,8 +4,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import proyecto.chat.App;
+import proyecto.chat.model.DAO.RoomsDAO;
+import proyecto.chat.model.DAO.UserDAO;
+import proyecto.chat.model.DataObject.Room;
+import proyecto.chat.model.DataObject.User;
+import proyecto.chat.utils.JAXBManager;
 
 import java.io.IOException;
+import java.util.List;
 
 public class NicknameController {
 
@@ -22,6 +28,13 @@ public class NicknameController {
      */
     @FXML private void accept(){
         accept.setOnMouseClicked(accept->{
+            RoomsDAO rda = JAXBManager.load("chatsFile.xml");
+            Room room = rda.getRoom("Sport");
+            UserDAO udao = new UserDAO();
+            udao.addUser(new User(this.nickname.getText(),"0.0.0.0",false,0));
+            room.setUsers((List<User>) udao.getAllUsers());
+            System.out.println(room);
+            JAXBManager.save(rda,"chatsFile.xml");
             //if exists mensaje exists
             System.exit(0);
         });

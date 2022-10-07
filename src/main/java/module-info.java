@@ -7,7 +7,6 @@ module proyecto.chat {
     requires java.desktop;
     requires java.logging;
 
-
     opens proyecto.chat to javafx.fxml;
     exports proyecto.chat.utils;
     opens proyecto.chat.model.DataObject;
@@ -15,5 +14,6 @@ module proyecto.chat {
     opens proyecto.chat.utils to java.xml.bind;
     exports proyecto.chat.controller;
     opens proyecto.chat.controller to javafx.fxml;
+    opens proyecto.chat.logging;
     exports proyecto.chat;
 }

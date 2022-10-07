@@ -1,16 +1,16 @@
 package proyecto.chat.controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import proyecto.chat.App;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ChatController {
+public class ChatController implements Initializable {
 
     /**
      * Atributos de la clase.
@@ -23,7 +23,7 @@ public class ChatController {
     @FXML private TableView tvUserTable;
     @FXML private TextField tfWriteMessage;
     @FXML private TextArea taMessages;
-
+    @FXML private Label lblNombreSala;
     /**
      * Función que hace que la ventana se minimice en la barra de tareas.
      */
@@ -89,4 +89,8 @@ public class ChatController {
         });
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

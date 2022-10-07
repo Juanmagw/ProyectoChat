@@ -44,18 +44,15 @@ public class JAXBManager {
      */
     public static RoomsDAO load(String file) {
         RoomsDAO result = null;
-        result = new RoomsDAO();
         try {
-            JAXBContext context = JAXBContext.newInstance(Room.class);
+            JAXBContext context = JAXBContext.newInstance(RoomsDAO.class);
             Unmarshaller um = context.createUnmarshaller();
             File f = new File(file);
-            if(f.exists()){
-                result=(RoomsDAO)um.unmarshal(f);
-            }else{
+            if(!f.exists()){
                 f.createNewFile();
-                result=(RoomsDAO)um.unmarshal(f);
             }
-
+            result=new RoomsDAO();
+            result=(RoomsDAO)um.unmarshal(f);
         } catch (JAXBException e) {
             Logging.warningLogging(e+"");
             new ErrorMessage("Error al cargar el archivo.","Error");
