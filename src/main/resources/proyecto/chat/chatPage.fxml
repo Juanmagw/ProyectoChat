@@ -23,16 +23,17 @@
       <AnchorPane layoutX="623.0" layoutY="95.0" prefHeight="321.0" prefWidth="238.0" style="-fx-background-color: grey;">
          <children>
             <TableView fx:id="tvUserTable" layoutX="10.0" layoutY="14.0" onMouseClicked="#privateChatPage" prefHeight="292.0" prefWidth="217.0">
-              <columns>
-                <TableColumn prefWidth="216.0" text="Usuarios" />
-              </columns>
+               <columns>
+                  <TableColumn prefWidth="216.0" text="Usuarios" />
+               </columns>
             </TableView>
          </children>
       </AnchorPane>
       <Label layoutX="785.0" layoutY="65.0" prefHeight="30.0" prefWidth="56.0" text="0/0">
          <font>
             <Font size="20.0" />
-         </font></Label>
+         </font>
+      </Label>
       <Label layoutX="78.0" layoutY="20.0" prefHeight="45.0" prefWidth="65.0" text="LOGO">
          <font>
             <Font size="20.0" />
@@ -56,7 +57,7 @@
             <Image url="@../../Images/maximizar.png" />
          </image>
       </ImageView>
-      <Label layoutX="329.0" layoutY="20.0" text="NOMBRE DE SALA">
+      <Label fx:id="chatName" layoutX="329.0" layoutY="20.0" text="NOMBRE DE SALA">
          <font>
             <Font size="30.0" />
          </font>
