@@ -24,6 +24,12 @@ public class ChatController implements Initializable {
     @FXML private TextField tfWriteMessage;
     @FXML private TextArea taMessages;
     @FXML private Label lblNombreSala;
+    @FXML private Label chatName;
+
+    public void setChatName(Label chatName) {
+        this.chatName = chatName;
+    }
+
     /**
      * Función que hace que la ventana se minimice en la barra de tareas.
      */
@@ -52,6 +58,7 @@ public class ChatController implements Initializable {
             if(tfWriteMessage.getText()!=null){
                 taMessages.setText(tfWriteMessage.getText());
                 taMessages.setWrapText(true);
+                tfWriteMessage.setText(null);
             }
         });
     }
@@ -60,7 +67,7 @@ public class ChatController implements Initializable {
      * Función que ordena el contenido del textArea.
      */
     public void taOrder(){
-        taMessages.getPrefRowCount();
+        taMessages.getText().lines();
     }
 
     /**
