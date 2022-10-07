@@ -1,10 +1,7 @@
 package proyecto.chat.controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import proyecto.chat.App;
 
@@ -23,6 +20,11 @@ public class ChatController {
     @FXML private TableView tvUserTable;
     @FXML private TextField tfWriteMessage;
     @FXML private TextArea taMessages;
+    @FXML private Label chatName;
+
+    public void setChatName(Label chatName) {
+        this.chatName = chatName;
+    }
 
     /**
      * Función que hace que la ventana se minimice en la barra de tareas.
@@ -52,6 +54,7 @@ public class ChatController {
             if(tfWriteMessage.getText()!=null){
                 taMessages.setText(tfWriteMessage.getText());
                 taMessages.setWrapText(true);
+                tfWriteMessage.setText(null);
             }
         });
     }
@@ -60,7 +63,7 @@ public class ChatController {
      * Función que ordena el contenido del textArea.
      */
     public void taOrder(){
-        taMessages.getPrefRowCount();
+        taMessages.getText().lines();
     }
 
     /**
