@@ -57,7 +57,7 @@
             <Image url="@../../Images/maximizar.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblNombreSala" layoutX="329.0" layoutY="20.0" text="NOMBRE DE SALA">
+      <Label fx:id="lblNombreSala" layoutX="329.0" layoutY="20.0" text="NOMBRE DE SALA"/>
       <Label fx:id="chatName" layoutX="329.0" layoutY="20.0" text="NOMBRE DE SALA">
          <font>
             <Font size="30.0" />

@@ -8,6 +8,9 @@ import proyecto.chat.App;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class ChatController implements Initializable {
@@ -56,7 +59,8 @@ public class ChatController implements Initializable {
         btnSend.setOnMouseClicked(send -> {
             tfWriteMessage.getText();
             if(tfWriteMessage.getText()!=null){
-                taMessages.setText(tfWriteMessage.getText());
+                DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+                taMessages.setText(dateFormat.format(new Date()) + " <Usuario> " + tfWriteMessage.getText() + "\n");
                 taMessages.setWrapText(true);
                 tfWriteMessage.setText(null);
             }

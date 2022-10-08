@@ -28,16 +28,15 @@ public class NicknameController {
      * Función que te introduce a la ventana de chat si el nickname no estaba siendo usado anteriormente y
      * te da error si lo estaba.
      */
-    @FXML private void accept(){
-        accept.setOnMouseClicked(accept->{
+    @FXML public void accept(){
+        btnAccept.setOnMouseClicked(accept->{
             RoomsDAO rda = JAXBManager.load("chatsFile.xml");
             Room room = rda.getRoom("Sport");
             UserDAO udao = new UserDAO();
-            udao.addUser(new User(this.nickname.getText(),"0.0.0.0",false,0));
+            udao.addUser(new User(this.tfNickname.getText(),"0.0.0.0",false,0));
             room.setUsers((List<User>) udao.getAllUsers());
             System.out.println(room);
             JAXBManager.save(rda,"chatsFile.xml");
-        btnAccept.setOnMouseClicked(accept->{
             try {
                 if(tfNickname.getText()!=null){
                     App.setRoot("chatPage");
@@ -48,14 +47,13 @@ public class NicknameController {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            //if exists mensaje exists
         });
     }
 
     /**
      * Función que hace que la ventana del nickname se cierre.
      */
-    @FXML private void cancel(){
+    @FXML public void cancel(){
         btnCancel.setOnMouseClicked(cancel->{
             try {
                 App.setRoot("mainPage");
@@ -64,4 +62,5 @@ public class NicknameController {
             }
         });
     }
+
 }
