@@ -73,9 +73,10 @@ public class MainController implements Initializable {
         App.setRoot("nickname");
     }
 
+    /*
     @Override
     @FXML public void chatPage() throws IOException {
-        /*try {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("chatPage.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -86,9 +87,9 @@ public class MainController implements Initializable {
             stage.showAndWait();
         } catch (IOException e) {
             Logging.warningLogging(e+"");
-        }*/
+        }
         App.setRoot("nickname");
-        /*btnChatSport.setOnMouseClicked(go->{
+        btnChatSport.setOnMouseClicked(go->{
             try {
                 App.setRoot(("chatPage"));
                 Stage s = new Stage();
@@ -109,8 +110,9 @@ public class MainController implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        });*/
+        });
     }
+    */
  @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         RoomsDAO rda = JAXBManager.load("chatsFile.xml");
@@ -121,10 +123,12 @@ public class MainController implements Initializable {
             rda.addRoom(new Room("Videogames", 50, null, null));
             rda.addRoom(new Room("Music", 20, null, null));
             JAXBManager.save(rda, "chatsFile.xml");
-            new InfoMessage("Entorno creado","Info").showMessage();
+            Logging.infoLogging("Entorno creado");
+            //new InfoMessage("Entorno creado","Info").showMessage();
         }
         else{
-            new InfoMessage("Entorno cargado","Info").showMessage();
+            Logging.infoLogging("Entorno cargado");
+            //new InfoMessage("Entorno cargado","Info").showMessage();
         }
 
         /*

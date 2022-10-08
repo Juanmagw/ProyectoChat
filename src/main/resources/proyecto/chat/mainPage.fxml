@@ -6,16 +6,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" style="-fx-background-color: rgba(100,200,150,1);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.chat.controller.MainController">
    <children>
-      <Button fx:id="btnChat" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#nickPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
-      <Button fx:id="btnChatSport" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;">
-         <textFill>
+      <Button fx:id="btnChat" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#nickPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnChatSport" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#nickPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <!--
+      <textField>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                <stops>
                   <Stop>
@@ -30,7 +28,8 @@
                   </Stop>
                </stops>
             </RadialGradient>
-         </textFill></Button>
+         </textField>
+         -->
       <Button fx:id="btnChatCook" layoutX="247.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
       <Button fx:id="btnChatVideogames" layoutX="466.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
       <Button fx:id="btnChatMusic" layoutX="680.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />

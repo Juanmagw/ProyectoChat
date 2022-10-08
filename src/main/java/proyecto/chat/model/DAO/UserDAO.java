@@ -1,12 +1,20 @@
 package proyecto.chat.model.DAO;
 
+import javafx.fxml.Initializable;
 import proyecto.chat.model.DataObject.User;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class UserDAO {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="Rooms")
+public class UserDAO implements Serializable {
 
+    static final long serialVersionUID = 1L;
     Collection<User> users = new ArrayList<>();
 
     public boolean addUser(User user){
