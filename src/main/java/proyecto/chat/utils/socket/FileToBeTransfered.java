@@ -1,5 +1,6 @@
 package proyecto.chat.utils.socket;
 
+import proyecto.chat.model.DataObject.UserMessage;
 import java.io.Serializable;
 
 public class FileToBeTransfered implements Serializable{
@@ -9,12 +10,14 @@ public class FileToBeTransfered implements Serializable{
     private int fileSize;
     public byte[] fileData;
     private String status;
+    private UserMessage usMessage;
 
-    public FileToBeTransfered(String fileName,int fileSize) {
+    public FileToBeTransfered(String fileName,int fileSize, UserMessage usMessage) {
         this.filename=fileName;
         this.fileSize=fileSize;
         this.status="";
         this.fileData=new byte[fileSize];
+        this.usMessage=usMessage;
     }
 
     public String getFilename() {

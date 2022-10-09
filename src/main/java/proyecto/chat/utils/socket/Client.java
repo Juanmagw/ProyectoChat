@@ -1,5 +1,6 @@
 package proyecto.chat.utils.socket;
 
+import proyecto.chat.model.DataObject.UserMessage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,7 +13,7 @@ import java.net.UnknownHostException;
 public class Client {
     public static void main(String[] args) {
         if(args.length!=2) {
-            System.out.println("Usage: java Client ipServer folderToBeTransfered");
+            System.out.println("Usage: java Client [ipServer] [folderToBeTransfered]");
         }else {
             String ipServer=args[0];
             String folderToBeTransfered=args[1];
@@ -44,18 +45,16 @@ public class Client {
                     for(String file : files) {
                         File f=new File(folderToBeTransfered+"/"+file);
                         if(f.exists() && f.isFile()) {
+                            UserMessage message = new UserMessage();
                             FileInputStream ff=new FileInputStream(f);
                             byte[] data=ff.readAllBytes();
-                            FileToBeTransfered ftbt = new FileToBeTransfered(f.getName(), data.length);
+                            FileToBeTransfered ftbt = new FileToBeTransfered(f.getName(), data.length, message);
                             ftbt.setFileData(data);
                             out.writeObject(ftbt);
                             out.flush();
                             System.out.println("Client: archivo transferido con éxito");
                         }
                     }
-
-
-
                 }else {
                     System.out.println("Client: La carpeta no existe");
                     return;
