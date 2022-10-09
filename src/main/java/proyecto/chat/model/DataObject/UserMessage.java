@@ -4,7 +4,10 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="message")
 public class UserMessage implements Serializable {
@@ -13,8 +16,8 @@ public class UserMessage implements Serializable {
      * Atributos de clase
      */
     static final long serialVersionUID = 1L;
-    private LocalDate date;
-    private User user;
+    private Date date;
+    private String user;
     private String message;
 
     /**
@@ -23,7 +26,7 @@ public class UserMessage implements Serializable {
      * @param user Usuario que escribió el mensaje
      * @param message Mensaje escrito
      */
-    public UserMessage(LocalDate date, User user, String message) {
+    public UserMessage(Date date, String user, String message) {
         this.date = date;
         this.user = user;
         this.message = message;
@@ -40,7 +43,7 @@ public class UserMessage implements Serializable {
      * Obtiene la fecha en la que se escribio el mensaje
      * @return Fecha del mensaje
      */
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -48,7 +51,7 @@ public class UserMessage implements Serializable {
      * Setea la fecha del mensaje
      * @param date Fecha del mensaje
      */
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -56,7 +59,7 @@ public class UserMessage implements Serializable {
      * Obtiene un usuario
      * @return Usuario
      */
-    public User getUser() {
+    public String getUser() {
         return user;
     }
 
@@ -64,7 +67,7 @@ public class UserMessage implements Serializable {
      * Setea un usuario
      * @param user Usuario a setear
      */
-    public void setUser(User user) {
+    public void setUser(String user) {
         this.user = user;
     }
 
@@ -90,6 +93,7 @@ public class UserMessage implements Serializable {
      */
     @Override
     public String toString() {
-        return "["+this.user.getAlias()+"]" + " --> " + this.date + " --> " + this.message ;
+        DateFormat df = new SimpleDateFormat("HH:mm:ss");
+        return "<" + this.user + ">" + " --> " + df.format(this.date) + " --> " + this.message + "\n";
     }
 }

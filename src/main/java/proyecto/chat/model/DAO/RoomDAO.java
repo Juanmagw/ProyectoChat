@@ -11,7 +11,7 @@ import java.util.Collection;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="Rooms")
-public class RoomsDAO implements Serializable {
+public class RoomDAO implements Serializable {
 
     /**
      * Atributos de clase
@@ -22,7 +22,7 @@ public class RoomsDAO implements Serializable {
     /**
      * Constructor por defecto
      */
-    public RoomsDAO() {rooms = new ArrayList<>();}
+    public RoomDAO() {rooms = new ArrayList<>();}
 
     /**
      * Método que añade una sala creada al list de salas

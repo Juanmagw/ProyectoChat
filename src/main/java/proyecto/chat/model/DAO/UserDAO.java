@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="Rooms")
+@XmlRootElement(name="Users")
 public class UserDAO implements Serializable {
 
     static final long serialVersionUID = 1L;

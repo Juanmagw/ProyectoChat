@@ -1,8 +1,7 @@
 package proyecto.chat.utils;
 
-import proyecto.chat.model.DataObject.Room;
 import proyecto.chat.logging.Logging;
-import proyecto.chat.model.DAO.RoomsDAO;
+import proyecto.chat.model.DAO.RoomDAO;
 
 import javax.xml.bind.*;
 import java.io.*;
@@ -14,12 +13,12 @@ public class JAXBManager {
      * @param rooms List de chats
      * @param file Nombre de archivo
      */
-    public static void save(RoomsDAO rooms, String file) {
+    public static void save(RoomDAO rooms, String file) {
         JAXBContext context;
         BufferedWriter bfr;
         try {
             bfr = new BufferedWriter(new FileWriter(file));
-            context = JAXBContext.newInstance(RoomsDAO.class);
+            context = JAXBContext.newInstance(RoomDAO.class);
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             m.marshal(rooms, bfr);
@@ -42,17 +41,17 @@ public class JAXBManager {
      * @param file Nombre del archivo a cargar
      * @return List con los chats almacenados o null si está vacío
      */
-    public static RoomsDAO load(String file) {
-        RoomsDAO result = null;
+    public static RoomDAO load(String file) {
+        RoomDAO result = null;
         try {
-            JAXBContext context = JAXBContext.newInstance(RoomsDAO.class);
+            JAXBContext context = JAXBContext.newInstance(RoomDAO.class);
             Unmarshaller um = context.createUnmarshaller();
             File f = new File(file);
             if(!f.exists()){
                 f.createNewFile();
             }
-            result=new RoomsDAO();
-            result=(RoomsDAO)um.unmarshal(f);
+            result=new RoomDAO();
+            result=(RoomDAO)um.unmarshal(f);
         } catch (JAXBException e) {
             Logging.warningLogging(e+"");
             new ErrorMessage("Error al cargar el archivo.","Error");
