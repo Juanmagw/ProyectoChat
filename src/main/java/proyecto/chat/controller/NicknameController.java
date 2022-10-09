@@ -10,8 +10,6 @@ import proyecto.chat.model.DataObject.Room;
 import proyecto.chat.model.DataObject.User;
 import proyecto.chat.utils.JAXBManager;
 import proyecto.chat.utils.ErrorMessage;
-import proyecto.chat.utils.Utils;
-
 import java.io.IOException;
 import java.util.List;
 

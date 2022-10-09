@@ -5,7 +5,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import proyecto.chat.App;
-
 import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
