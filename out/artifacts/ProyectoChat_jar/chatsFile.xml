@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Rooms>
+    <rooms>
+        <name>Sport</name>
+        <numUsersMax>50</numUsersMax>
+        <users>
+            <alias>Yomismo</alias>
+            <ip>0.0.0.0</ip>
+            <banned>false</banned>
+            <numOffence>0</numOffence>
+        </users>
+        <messages>
+            <date>2022-10-10T23:55:21.591+02:00</date>
+            <user>usuario</user>
+            <message>hola</message>
+        </messages>
+        <messages>
+            <date>2022-10-10T23:55:31.213+02:00</date>
+            <user>usuario</user>
+            <message>que tal?</message>
+        </messages>
+    </rooms>
+    <rooms>
+        <name>Cook</name>
+        <numUsersMax>20</numUsersMax>
+    </rooms>
+    <rooms>
+        <name>Videogames</name>
+        <numUsersMax>50</numUsersMax>
+    </rooms>
+    <rooms>
+        <name>Music</name>
+        <numUsersMax>20</numUsersMax>
+    </rooms>
+</Rooms>
