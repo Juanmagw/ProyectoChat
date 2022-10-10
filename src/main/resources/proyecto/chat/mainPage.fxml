@@ -30,9 +30,9 @@
             </RadialGradient>
          </textField>
          -->
-      <Button fx:id="btnChatCook" layoutX="247.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
-      <Button fx:id="btnChatVideogames" layoutX="466.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
-      <Button fx:id="btnChatMusic" layoutX="680.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#chatPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnChatCook" layoutX="247.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#nickPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnChatVideogames" layoutX="466.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#nickPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnChatMusic" layoutX="680.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#nickPage" opacity="0.0" prefHeight="190.0" prefWidth="196.0" style="-fx-background-color: black;" />
       <ImageView disable="true" fitHeight="158.0" fitWidth="196.0" layoutX="25.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Images/deporte.jpg" />

@@ -4,11 +4,32 @@
         <name>Sport</name>
         <numUsersMax>50</numUsersMax>
         <users>
+            <alias>uuuu</alias>
             <alias>jesa</alias>
             <ip>0.0.0.0</ip>
             <banned>false</banned>
             <numOffence>0</numOffence>
         </users>
+        <messages>
+            <date>2022-10-09T23:37:14.309+02:00</date>
+            <user>usuario</user>
+            <message>cvbvcb</message>
+        </messages>
+        <messages>
+            <date>2022-10-09T23:37:16.023+02:00</date>
+            <user>usuario</user>
+            <message>cvbvcbvcb</message>
+        </messages>
+        <messages>
+            <date>2022-10-09T23:37:22.057+02:00</date>
+            <user>usuario</user>
+            <message>sdfggcg</message>
+        </messages>
+        <messages>
+            <date>2022-10-09T23:37:28.078+02:00</date>
+            <user>usuario</user>
+            <message>jhkkhjk</message>
+        </messages>
     </rooms>
     <rooms>
         <name>Cook</name>

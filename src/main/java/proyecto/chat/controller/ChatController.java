@@ -5,11 +5,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import proyecto.chat.App;
+import proyecto.chat.model.DAO.MessageDAO;
+import proyecto.chat.model.DAO.RoomDAO;
+import proyecto.chat.model.DataObject.Room;
+import proyecto.chat.model.DataObject.UserMessage;
+import proyecto.chat.utils.JAXBManager;
 import java.io.IOException;
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ChatController implements Initializable {
@@ -27,6 +31,15 @@ public class ChatController implements Initializable {
     @FXML private TextArea taMessages;
     @FXML private Label lblNombreSala;
     @FXML private Label chatName;
+    private RoomDAO rd;
+    private UserMessage usm;
+    private MessageDAO md;
+    private Room room;
+    private String nickname;
+
+    public void setNickname(String nickname) {
+        this.nickname=nickname;
+    }
 
     public void setChatName(Label chatName) {
         this.chatName = chatName;
@@ -58,8 +71,16 @@ public class ChatController implements Initializable {
         btnSend.setOnMouseClicked(send -> {
             tfWriteMessage.getText();
             if(tfWriteMessage.getText()!=null){
-                DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-                taMessages.setText(dateFormat.format(new Date()) + " <Usuario> " + tfWriteMessage.getText() + "\n");
+                Date date = new Date();
+                usm = new UserMessage(date,"usuario",tfWriteMessage.getText());
+                md.addMessage(usm);
+                room.setMessages((List<UserMessage>) md.getMessages());
+                JAXBManager.save(rd,"chatsFile.xml");
+                String result=null;
+                for(UserMessage m : room.getMessages()){
+                    result=taMessages.getText() + m.toString();
+                }
+                taMessages.setText(result);
                 taMessages.setWrapText(true);
                 tfWriteMessage.setText(null);
             }
@@ -101,6 +122,8 @@ public class ChatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        rd = JAXBManager.load("chatsFile.xml");
+        md = new MessageDAO();
+        room=rd.getRoom("Sport");
     }
 }
