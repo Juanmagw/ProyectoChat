@@ -9,8 +9,6 @@ import proyecto.chat.logging.Logging;
 import proyecto.chat.model.DataObject.Room;
 import proyecto.chat.model.DAO.RoomDAO;
 import proyecto.chat.utils.JAXBManager;
-import proyecto.chat.model.DAO.RoomsDAO;
-import proyecto.chat.utils.JAXBManager;
 import proyecto.chat.utils.socket.Client;
 import proyecto.chat.utils.socket.Server;
 
@@ -58,8 +56,6 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         RoomDAO rda = JAXBManager.load("chatsFile.xml");
-        Server serv = new Server();
-        RoomsDAO rda = JAXBManager.load("chatsFile.xml");
         if (rda.isEmpty()) {
             rda = new RoomDAO();
             rda.addRoom(new Room("Sport", 50, null, null));
