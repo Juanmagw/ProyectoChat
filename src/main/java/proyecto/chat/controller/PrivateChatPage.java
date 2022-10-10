@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import proyecto.chat.App;
-
 import java.io.IOException;
 
 public class PrivateChatPage {

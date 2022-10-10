@@ -4,7 +4,12 @@
         <name>Sport</name>
         <numUsersMax>50</numUsersMax>
         <users>
+<<<<<<< HEAD
             <alias>dgfdg</alias>
+=======
+            <alias>uuuu</alias>
+            <alias>jesa</alias>
+>>>>>>> ab7d99bb61043a0a30c23de61ecd0cbc276a6e16
             <ip>0.0.0.0</ip>
             <banned>false</banned>
             <numOffence>0</numOffence>
