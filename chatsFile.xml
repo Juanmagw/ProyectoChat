@@ -5,6 +5,7 @@
         <numUsersMax>50</numUsersMax>
         <users>
             <alias>uuuu</alias>
+            <alias>jesa</alias>
             <ip>0.0.0.0</ip>
             <banned>false</banned>
             <numOffence>0</numOffence>
